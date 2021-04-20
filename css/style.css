@@ -1,0 +1,497 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*1er point de rupture*/
+
+@media screen and (min-width:1300px) {
+    .container {
+        max-width: 1300px;
+        height: auto;
+    }
+}
+
+main, .bloc__footer {
+    width: 90%;
+}
+
+body, .navbar__mini, .article__posted .article__date, .pagination, .recent, header, .logo, .container, article, .blog, .search, footer {
+    display: flex;
+}
+
+header, .logo, .container, article, .blog, .search, footer {
+    flex-direction: column;
+}
+
+header, .logo, .navbar__mini, .container, article, .blog, .recent, .search, footer {
+    align-items: center;
+}
+
+.banner__title, .arg .arg__title, .article__date, .recent__subtitle, .recentposts__title, .search__title {
+    font-weight: normal;
+} 
+
+header, .logo__showtrack, .navbar__mini, .banner, .bann__img, .banner__text, .article__img, .blog__image, footer {
+    width: 100%;
+}
+
+.arg .arg__title, .article__posted .article__date, .pagination .pagination--active, .recentposts__title, .search__title{
+    background-color: #FFFFFF;
+}
+
+.article__button, .pagenumber , footer {
+    background-color: #000000;
+}
+
+.banner__text, .article__button, .pagenumber , footer {
+    color: #FFFFFF;
+}
+
+.banner, .arg, .arg .arg__title, .recentposts, .search  {
+    position: relative;
+}
+
+.banner__text, .article__posted .article__date, .recentposts__title, .search__title {
+    position: absolute;
+}
+
+.banner__text, .arg, article, .pagenumber , .blog, .recentposts__title, .search__title, .foot__description {
+    text-align: center;
+}
+
+.arg, article, .article__button, .pagination--active, .pagenumber , .blog, .recentposts, .search, input {
+    border: 1px solid #000000;
+}
+
+.arg, article, .blog, .recentposts, .search {
+    padding: 25px;
+}
+
+.arg .arg__title, .article__posted .article__date, .recentposts__title{
+    padding: 0px 17px 0px;
+}
+
+.recentposts__title, .search__title, .arg .arg__title {
+    left: 50%;
+    transform: translate(-50%, -210%);
+}
+
+/*HEADER*/
+
+.logo {
+    width: 95%;
+}
+
+.logo__showtrack {
+    margin-top: -30px;
+    margin-bottom: -0px;
+}
+
+.navbar__mini {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5%;
+}
+
+.navbar__mini__img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5%;
+}
+
+.navbar__mini__menu {
+    margin-right: 5%;
+}
+
+.nav__scroll {
+    width: 15px;
+    height: 15px;
+}
+
+.navbar {
+    display: none;
+}
+
+/*second point de rupture*/
+@media screen and (min-width:400px) {
+    .logo__showtrack {
+        width: 400px;
+    }
+}
+
+/*third point de rupture*/
+@media screen and (min-width:1024px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 90%;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+    }
+
+    .nav__first{
+        text-decoration: none;
+        color: #000000;
+        padding: 20px;
+    }
+
+    .navbar__mini {
+        display: none;
+    }
+}
+
+/*Bannières femme*/
+
+.banner {
+    margin: 0px 0px 30px;
+}
+
+.bann__img {
+    height: auto;
+}
+
+.bann__img__2 {
+    display: none;
+}
+
+.banner__text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner__title {
+    font-size: 28px;
+}  
+
+/*4ième point de rupture*/
+@media screen and (min-width:700px) {
+    .bann__img {
+        display: none;
+    }
+
+    .bann__img__2 {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner__title {
+        font-size: 55px;
+    }  
+
+    .bann__description {
+        font-size: 18px;
+    }
+}
+
+/*Les arguments*/
+
+.arg {
+    margin: 0px 0px 30px;
+}
+
+.arg--middle .arg__title {
+    width: 250px;
+}
+
+.arg--left .arg__title, .arg--right .arg__title {
+    width: 200px;
+}
+
+.arg__description {
+    margin-top: -50px;
+}
+
+/*5ième point de rupture*/
+@media screen and (min-width: 900px) {
+    .arguments {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .arg {
+        width: 32%;
+    }
+}
+
+/*Les articles*/
+
+article {
+    margin: 0px 0px 30px;
+}
+
+.article__title {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.article__posted .article__date {
+    width: 250px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -140%);
+}
+
+/*6ième point de rupture*/
+@media screen and (min-width:460px) {
+    .article__posted .article__date {
+        width: 350px;
+    }
+
+    .article__posted {
+        border-bottom: 1px solid #000000;
+        position: relative;
+        margin-bottom: 20px;
+        width: 70%;
+    }
+}
+
+/*7ième point de rupture*/
+@media screen and (min-width:699px) {
+    .article__posted .article__date {
+        width: 360px;
+    }
+
+    .article__posted {
+        border-bottom: 1px solid #000000;
+        position: relative;
+        margin-bottom: 20px;
+        width: 65%;
+    }
+
+    .article__title {
+        font-size: 30px;
+    }
+
+    .article__date {
+        font-size: 17px;
+    }
+
+    .article__description {
+        font-size: 16px;
+    }
+}
+
+.article__date {
+    font-size: 15px;
+}
+
+.article__description {
+    color: #7A7A7A;
+    font-size: 14px;
+}
+
+.article__button {
+    width: 120px;
+    height: 50px;
+    padding: 12px;
+}
+
+.article__button, .pagenumber{
+    text-decoration: none;
+}
+
+.pagination {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pagination--active{
+    color: #000000;
+}
+
+.pagination--two, .pagination--three {
+    display: none;
+}
+
+.pagination--next:hover {
+background-color: #FFFFFF;
+color: #000000;
+}
+
+.pagination--active, .pagination--two, .pagination--three {
+    width: 45px;
+    height: 45px;
+}
+
+.pagination--next {
+    width: 70px;
+    height: 45px;
+}
+
+.pagenumber {
+    margin-right: 12px;
+    margin-bottom: 50px;
+    padding: 12px;
+}
+
+/*8ième point de rupture*/
+@media screen and (min-width:650px) {
+    .pagination--two {
+        display: block;
+    }
+
+    .pagination--two:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+}
+
+/*9ième point de rupture*/
+@media screen and (min-width:900px) {
+    .pagination--three {
+        display: block;
+    }
+
+    .pagination--three:hover {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+}
+
+/*Aside*/
+
+.blog, .recentposts, .search {
+    margin: 0px 0px 30px;
+}
+
+.blog .blog__sign{
+    width: 130px;
+}
+
+.blog__description{
+    font-size: 15px;
+}
+
+.recent {
+    justify-content: start;
+    border-bottom: 1px solid lightgrey;
+}
+
+.recent:nth-child(6) {
+    border-bottom: none;
+}
+
+.recent__img {
+    margin-right: 20px;
+}
+
+.recent__subtitle {
+    font-size: 14px;
+}
+
+.recent__date {
+    font-size: 12px;
+    color: #7A7A7A;
+}
+
+.recentposts__title {
+    width: 250px;
+}
+
+.search__title {
+    width: 335px;
+
+}
+
+/*Regler l'espacement entre chaque iconnes !*/
+.prout{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+    padding: 10px;
+}
+
+.search__bar {
+    width: 90%;
+    height: 35px;
+    border-radius: 3px;
+    text-indent: 10px;
+}
+
+/*10ième point de rupture*/
+@media screen and (min-width:990px) {
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .articles {
+        width: 67%;
+    }
+
+    aside {
+        width: 30%;
+    }
+}
+
+/*Le Footer*/
+
+.bloc__footer {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.foot {
+    margin: 30px 0px;
+}
+
+.foot__description {
+    color:#7A7A7A;
+    text-align: initial;
+    font-size: 14px;
+}
+
+.foot__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.bloc__footer em {
+    font-style: normal;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7A7A7A;
+}
+
+.foot__description {
+    padding: 20px 0px;
+}
+
+/*Copyright*/ 
+
+.copyright {
+    padding: 5px;
+}
+
+/*11ième point de rupture*/
+@media screen and (min-width:900px) {
+    .bloc__footer {
+        display: flex;
+    }
+
+    .foot {
+        padding: 10px;
+    }
+}
+
+/*12ième point de rupture*/
+@media screen and (min-width:1300px) {
+    .bloc__footer {
+        width: 1200px;
+    }
+}
